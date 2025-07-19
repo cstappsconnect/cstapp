@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#0f172a] text-gray-200">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Your Bybit Signup - CST Access</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .modal-bg {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body class="min-h-screen px-6 py-12">
+
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <h1 class="text-3xl font-bold text-green-400">Verify with Bybit to Unlock Your CST Access</h1>
+    <p class="text-gray-400 mt-2 max-w-xl mx-auto">Sign up with Bybit (free), verify your account, and claim your full CST membership — normally $1200/year.</p>
+  </header>
+
+  <!-- Main Call to Action -->
+  <section class="max-w-3xl mx-auto bg-gray-800 border border-gray-700 rounded-lg shadow p-6 text-center">
+    <p class="text-lg font-medium mb-4 text-gray-100">✅ Step 1: <strong>Sign up with Bybit (Free)</strong></p>
+    <a href="https://www.bybit.com/en-US/register?affiliate_id=YOUR_ID" target="_blank"
+       class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg mb-6 transition">
+      Sign Up With Bybit Now →
+    </a>
+
+    <p class="text-lg font-medium mb-4 text-gray-100">✅ Step 2: <strong>Come back and claim your CST access</strong></p>
+    <button onclick="openModal()" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition">
+      View CST Plan & Claim Free Access
+    </button>
+  </section>
+
+  <!-- Big Modal: Pricing Comparison -->
+  <div id="pricingModal" class="fixed inset-0 hidden justify-center items-center z-50 modal-bg">
+    <div class="bg-gray-900 rounded-xl p-8 max-w-4xl w-full shadow-xl relative text-white">
+      <button onclick="closeModal()" class="absolute top-3 right-5 text-gray-400 hover:text-red-400 text-xl font-bold">&times;</button>
+      <h2 class="text-2xl font-bold text-green-400 mb-6 text-center">CST Membership Pricing Comparison</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-300">
+        <!-- Plan 1: Monthly -->
+        <div class="border border-gray-700 rounded-lg p-4 bg-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Standard Monthly</h3>
+          <p class="text-xl font-bold text-yellow-400">$89.99/month</p>
+          <ul class="mt-3 list-disc ml-5 space-y-1">
+            <li>Signal & Whale Alerts</li>
+            <li>NFT & Meme Coin Trackers</li>
+            <li>DEX Volume Dashboards</li>
+            <li>No Bonus Access</li>
+          </ul>
+        </div>
+
+        <!-- Plan 2: Yearly -->
+        <div class="border border-gray-700 rounded-lg p-4 bg-gray-800">
+          <h3 class="text-lg font-semibold text-white mb-2">Annual Plan</h3>
+          <p class="text-xl font-bold text-yellow-400">$1,200/year</p>
+          <ul class="mt-3 list-disc ml-5 space-y-1">
+            <li>Everything in Monthly</li>
+            <li>Private Discord Channels</li>
+            <li>1-on-1 Strategy Call</li>
+            <li>Exclusive NFT Airdrop</li>
+          </ul>
+        </div>
+
+        <!-- Plan 3: Bybit Signup -->
+        <div class="border border-green-600 rounded-lg p-4 bg-green-900">
+          <h3 class="text-lg font-semibold text-green-200 mb-2">Verified Bybit User</h3>
+          <p class="text-xl font-bold text-white">FREE</p>
+          <ul class="mt-3 list-disc ml-5 space-y-1">
+            <li>All Premium Features</li>
+            <li>Bonus Access & Giveaways</li>
+            <li>Early Product Releases</li>
+            <li>Private Beta Dashboard</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="https://www.bybit.com/en-US/register?affiliate_id=YOUR_ID" target="_blank"
+           class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-lg transition">
+          Sign Up & Verify with Bybit →
+        </a>
+        <button onclick="openUIDModal()"
+        class="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg transition">
+  Verify Bybit UID →
+</button>
+
+      </div>
+    </div>
+  </div>
+
+
+<!-- UID Check Modal -->
+<div id="uidModal" class="fixed inset-0 hidden justify-center items-center z-50 modal-bg">
+  <div class="bg-gray-900 rounded-xl p-8 max-w-lg w-full shadow-xl relative text-white">
+    <button onclick="closeUIDModal()" class="absolute top-3 right-5 text-gray-400 hover:text-red-400 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold text-green-400 mb-4 text-center">Verify Your Bybit UID</h2>
+
+    <form onsubmit="checkBybitUID(event)" class="space-y-4">
+      <input id="bybitUID" type="text" placeholder="Enter your Bybit UID" required
+             class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+
+      <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition">
+        Check Eligibility
+      </button>
+    </form>
+
+    <div id="uidResult" class="mt-6 hidden bg-gray-800 p-4 rounded-lg border border-gray-700 text-sm">
+      <p><strong>UID:</strong> <span id="resultUID" class="text-green-300"></span></p>
+      <p><strong>Traded Volume:</strong> <span id="resultVolume" class="text-yellow-300"></span></p>
+      <p><strong>Tier:</strong> <span id="resultTier" class="text-indigo-300"></span></p>
+      <p class="mt-2"><strong>Eligible Rewards:</strong></p>
+      <ul class="list-disc ml-6 text-gray-300" id="resultRewards"></ul>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function openUIDModal() {
+    document.getElementById('uidModal').classList.remove('hidden');
+    document.getElementById('uidModal').classList.add('flex');
+  }
+
+  function closeUIDModal() {
+    document.getElementById('uidModal').classList.remove('flex');
+    document.getElementById('uidModal').classList.add('hidden');
+    document.getElementById('uidResult').classList.add('hidden');
+  }
+
+  function checkBybitUID(event) {
+    event.preventDefault();
+
+    const uid = document.getElementById('bybitUID').value;
+    
+    // Simulate a high trade volume
+    const volume = Math.floor(Math.random() * 8000000) + 1000000; // $1M–$9M
+
+    // Always show Platinum rewards
+    const tier = 'Platinum';
+    const rewards = [
+      '🔥 Lifetime CST Access',
+      '💰 Guaranteed Airdrops',
+      '🎁 Hardware Wallet (Ledger Nano)',
+      '🎟️ VIP Discord Access',
+      '🧠 Strategy Call w/ Analyst',
+      '📊 Custom Dashboard Access',
+      '🚀 Early Token Access',
+      '🎨 NFT Art Drop (Mystery Pack)',
+      '📦 CST Premium Swag Box'
+    ];
+
+    // Display results
+    document.getElementById('resultUID').textContent = uid;
+    document.getElementById('resultVolume').textContent = `$${volume.toLocaleString()}`;
+    document.getElementById('resultTier').textContent = tier;
+
+    const rewardList = document.getElementById('resultRewards');
+    rewardList.innerHTML = '';
+    rewards.forEach(r => {
+      const li = document.createElement('li');
+      li.textContent = r;
+      rewardList.appendChild(li);
+    });
+
+    document.getElementById('uidResult').classList.remove('hidden');
+  }
+</script>
+
+
+
+
+
+
+  <!-- JS -->
+  <script>
+    function openModal() {
+      document.getElementById('pricingModal').classList.remove('hidden');
+      document.getElementById('pricingModal').classList.add('flex');
+    }
+    function closeModal() {
+      document.getElementById('pricingModal').classList.remove('flex');
+      document.getElementById('pricingModal').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>

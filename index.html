@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CST | Crypto Signal & Trends</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -1;
+      animation: fadeInBg 20s ease-in-out infinite alternate;
+      opacity: 0.2;
+    }
+
+    @keyframes fadeInBg {
+      0% { opacity: 0.2; }
+      100% { opacity: 0.4; }
+    }
+
+    .hero-section {
+      background: url('2.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Header -->
+  <header class="bg-gray-800 fixed w-full z-50 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-teal-400">CST</h1>
+      <nav class="space-x-6">
+        <a href="#features" class="hover:text-teal-300">Features</a>
+        <a href="#newsletters" class="hover:text-teal-300">Newsletters</a>
+        <a href="#insights" class="hover:text-teal-300">Insights</a>
+        <a href="#community" class="hover:text-teal-300">Community</a>
+        <a href="#contact" class="hover:text-teal-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section pt-32 pb-20 text-center">
+    <div class="hero-content container mx-auto px-6">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-teal-300">Best Cryptocurrency Newsletters to Subscribe To</h2>
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+        Stay informed with expert insights, updates, and the latest in blockchain innovation. Join thousands of crypto enthusiasts making smarter decisions every week.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-950">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl font-semibold text-teal-400">Why Join CST?</h3>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold text-teal-300 mb-2">Weekly Insight</h4>
+          <p>Gain an understanding of the crypto markets. Delivered to your inbox weekly.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold text-teal-300 mb-2">Authentic Analysis</h4>
+          <p>Discover new opportunities and gain an edge in understanding the future of finance.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold text-teal-300 mb-2">Strong Community</h4>
+          <p>Join a vibrant community of investors and enthusiasts discussing the latest in crypto.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold text-teal-300 mb-2">Constant Learning</h4>
+          <p>Learn from experts as we bridge traditional analysis with the world of crypto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletters" class="py-20 bg-gray-900 text-center">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-teal-400 mb-4">Top Crypto Newsletters</h3>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        The best way to stay updated is through well-curated newsletters. Our handpicked selection delivers expert-curated content directly to your inbox.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="font-bold text-teal-300">The Daily Crypto Brief</h4>
+          <p class="text-sm text-gray-400 mt-2">Daily insights, major market moves, and quick reads.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="font-bold text-teal-300">Blockchain Weekly</h4>
+          <p class="text-sm text-gray-400 mt-2">Deep dives, updates, and interviews from thought leaders.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h4 class="font-bold text-teal-300">Signals & Trends</h4>
+          <p class="text-sm text-gray-400 mt-2">Get the pulse on emerging patterns and market behavior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights Section -->
+  <section id="insights" class="py-20 bg-gray-950">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-teal-400 mb-6">Institutional-Grade Crypto Insights</h3>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        Get comprehensive reports, on-chain analytics, and price movement forecasts from top crypto analysts. Navigate volatility with clarity and foresight.
+      </p>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-teal-400 mb-4">Join Our Community</h3>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        Engage in discussions, attend virtual meetups, and share insights with fellow crypto investors. Our vibrant community spans traders, analysts, and builders.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-800 py-12 border-t border-gray-700">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <h4 class="text-teal-300 font-bold mb-4">About CST</h4>
+        <p class="text-gray-400">CST is your trusted platform for cryptocurrency signals, trends, and institutional-level analysis. Stay informed and ahead.</p>
+      </div>
+      <div>
+        <h4 class="text-teal-300 font-bold mb-4">Resources</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#features" class="hover:text-white">Why CST</a></li>
+          <li><a href="#newsletters" class="hover:text-white">Top Newsletters</a></li>
+          <li><a href="#insights" class="hover:text-white">Crypto Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-teal-300 font-bold mb-4">Community</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#community" class="hover:text-white">Join Discord</a></li>
+          <li><a href="#" class="hover:text-white">Twitter</a></li>
+          <li><a href="#" class="hover:text-white">YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-teal-300 font-bold mb-4">Contact</h4>
+        <p class="text-gray-400">Email: contact@cryptosignals.today</p>
+        <p class="text-gray-400">Support: support@cryptosignals.today</p>
+      </div>
+    </div>
+    <div class="mt-10 text-center text-gray-600 text-xs">© 2025 Crypto Signals Today. All rights reserved.</div>
+  </footer>
+</body>
+</html>
